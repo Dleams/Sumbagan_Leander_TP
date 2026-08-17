@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Online Food Ordering</title>
+
+    <link rel="stylesheet" href="food.css">
+    
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="header">
+
+        <div class="logo">
+            🍔 Food Yum
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Delicious Food,<br>Delivered to You.</h1>
+
+            <p>
+                Order your favorite meals quickly and easily.
+            </p>
+
+            <a href="#menu" class="primary-button">
+                Order Now
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            🍔
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENU SECTION
+    ========================== -->
+    <main id="menu" class="menu-section">
+
+        <div class="section-header">
+
+            <h2>Our Menu</h2>
+
+            <p>
+                Choose your favorite food.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Search food..."
+            >
+
+        </div>
+
+
+        <!-- CATEGORY BUTTONS -->
+        <div class="categories">
+
+            <button
+                class="category-button active"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                class="category-button"
+                data-category="burger">
+                🍔 Burgers
+            </button>
+
+            <button
+                class="category-button"
+                data-category="pizza">
+                🍕 Pizza
+            </button>
+
+            <button
+                class="category-button"
+                data-category="chicken">
+                🍗 Chicken
+            </button>
+
+            <button
+                class="category-button"
+                data-category="drink">
+                🥤 Drinks
+            </button>
+
+        </div>
+
+
+        <!-- FOOD CARDS -->
+        <div class="food-grid" id="foodGrid">
+
+            <!-- Burger -->
+            <div
+                class="food-card"
+                data-category="burger"
+                data-name="Classic Burger">
+
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Classic Burger</h3>
+
+                    <p>
+                        Beef patty with cheese and fresh vegetables.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱80
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="1"
+                            data-name="Classic Burger"
+                            data-price="80">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cheeseburger -->
+            <div
+                class="food-card"
+                data-category="burger"
+                data-name="Cheeseburger">
+
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Cheeseburger</h3>
+
+                    <p>
+                        Juicy beef burger with melted cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱100
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="2"
+                            data-name="Cheeseburger"
+                            data-price="100">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pepperoni Pizza -->
+            <div
+                class="food-card"
+                data-category="pizza"
+                data-name="Pepperoni Pizza">
+
+                <div class="food-image">
+                    🍕
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Pepperoni Pizza</h3>
+
+                    <p>
+                        Classic pizza topped with pepperoni and cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱250
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="3"
+                            data-name="Pepperoni Pizza"
+                            data-price="250">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hawaiian Pizza -->
+            <div
+                class="food-card"
+                data-category="pizza"
+                data-name="Hawaiian Pizza">
+
+                <div class="food-image">
+                    🍕
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Hawaiian Pizza</h3>
+
+                    <p>
+                        Ham, pineapple and melted cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱280
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="4"
+                            data-name="Hawaiian Pizza"
+                            data-price="280">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fried Chicken -->
+            <div
+                class="food-card"
+                data-category="chicken"
+                data-name="Fried Chicken">
+
+                <div class="food-image">
+                    🍗
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Fried Chicken</h3>
+
+                    <p>
+                        Crispy fried chicken served hot and fresh.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱180
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="5"
+                            data-name="Fried Chicken"
+                            data-price="180">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chicken Wings -->
+            <div
+                class="food-card"
+                data-category="chicken"
+                data-name="Chicken Wings">
+
+                <div class="food-image">
+                    🍗
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Chicken Wings</h3>
+
+                    <p>
+                        Crispy chicken wings with special sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱200
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="6"
+                            data-name="Chicken Wings"
+                            data-price="200">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Coke Zero -->
+            <div
+                class="food-card"
+                data-category="drink"
+                data-name="Coke Zero">
+
+                <div class="food-image">
+                    🥤
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Coke Zero</h3>
+
+                    <p>
+                        Cold and refreshing Coke Zero.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱45
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="7"
+                            data-name="Coke Zero"
+                            data-price="45">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Milkshake -->
+            <div
+                class="food-card"
+                data-category="drink"
+                data-name="Chocolate Milkshake">
+
+                <div class="food-image">
+                    🥤
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Chocolate Milkshake</h3>
+
+                    <p>
+                        Creamy chocolate milkshake.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₱70
+                        </span>
+
+                        <button
+                            class="add-button"
+                            data-id="8"
+                            data-name="Chocolate Milkshake"
+                            data-price="70">
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+    <section class="about" id="about">
+
+        <h2>About Food Yum</h2>
+
+        <p>
+            Food Yum is a simple online food ordering website
+            designed to make ordering meals fast and convenient.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CART SIDEBAR
+    ========================== -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div id="cartItems" class="cart-items">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total">
+
+                <span>Total:</span>
+
+                <strong id="cartTotal">
+                    ₱0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                id="checkoutButton">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         CHECKOUT MODAL
+    ========================== -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="checkout-modal">
+
+            <button
+                class="close-modal"
+                id="closeModal">
+
+                ✕
+
+            </button>
+
+            <h2>Checkout</h2>
+
+            <p>
+                Please enter your information.
+            </p>
+
+
+            <form id="checkoutForm">
+
+                <label for="customerName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="customerAddress">
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="Enter your address"
+                    required>
+                </textarea>
+
+
+                <label for="paymentMethod">
+                    Payment Method
+                </label>
+
+                <select
+                    id="paymentMethod"
+                    required>
+
+                    <option value="">
+                        Select payment
+                    </option>
+
+                    <option value="Cash">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="GCash">
+                        GCash
+                    </option>
+
+                    <option value="Card">
+                        Credit / Debit Card
+                    </option>
+
+                </select>
+
+
+                <div class="checkout-total">
+
+                    Total:
+                    <strong id="checkoutTotal">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="place-order-button">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         NOTIFICATION
+    ========================== -->
+
+    <div
+        class="notification"
+        id="notification">
+
+        Food added to cart!
+
+    </div>
+
+
+    <script src="food.js"></script>
+
+</body>
+</html>
